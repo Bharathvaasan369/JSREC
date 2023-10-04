@@ -57,7 +57,6 @@ void loop()
   {
     if(buttonState == LOW)
     {
-      //count = count+1;
       Serial.println("Reciving Input");
       http.begin("http://192.168.17.148/counter/post/post-10.php");
       http.addHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -79,7 +78,6 @@ void loop()
     }
     else
     {
-      //http.begin("http://192.168.126.148/presensi/fetcher1.php");
       http.begin("http://192.168.17.148/counter/recive/fetcher10.php");
       int httpCode = http.GET();
     
@@ -88,17 +86,14 @@ void loop()
         String status=http.getString();
         Serial.print("httpCode: ");
         Serial.println(httpCode);
-        //Serial.println(status);
         String a =  status;
-        //Serial.print(status);
         Serial.print("Status: ");
         Serial.println(a);
-        //pos = a.toInt();
         lcd.setCursor(0, 0);
         lcd.print("Mch_id:1 status");
         lcd.setCursor(0,1);
         lcd.print(a);
-      }//JUST CMD LINE FOR FILE CHECK UP
+      }
       http.end();
            }
   }
