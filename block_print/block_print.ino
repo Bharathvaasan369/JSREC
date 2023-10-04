@@ -89,10 +89,10 @@ void loop()
         String a =  status;
         Serial.print("Status: ");
         Serial.println(a);
-        lcd.setCursor(0, 0);
-        lcd.print("Mch_id:1 status");
-        lcd.setCursor(0,1);
-        lcd.print(a);
+        //lcd.setCursor(0, 0);
+        //lcd.print("Mch_id:1 status");
+        //lcd.setCursor(0,1);
+        //lcd.print(a);
       }
       http.end();
            }
