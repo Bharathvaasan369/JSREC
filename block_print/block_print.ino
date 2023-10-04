@@ -12,7 +12,6 @@ const int buttonPin = D4;
 int buttonState = 0;
 int newState;
 int oldState;
-//int pos;
 int count;
 
 String apiKeyValue = "tPmAT5Ab3j7F9";
@@ -28,32 +27,7 @@ void setup()
   Serial.println(ssid); 
   WiFi.begin(ssid, password);
   Serial.print("Connecting to ");
-  while(WiFi.status() != WL_CONNECTED)
-  {
-    delay(500);
-    Serial.println(".");
-    lcd.setCursor(0, 0);
-    lcd.print("Connecting to");
-    lcd.setCursor(0, 1);
-    lcd.print("WiFi");
-    delay(1000);
-    lcd.setCursor(0, 0);
-    lcd.print("Connecting to");
-    lcd.setCursor(0, 1);
-    lcd.print("WiFi.");
-    delay(1000);
-    lcd.setCursor(0, 0);
-    lcd.print("Connecting to");
-    lcd.setCursor(0, 1);
-    lcd.print("WiFi..");
-    delay(1000);
-    lcd.setCursor(0, 0);
-    lcd.print("Connecting to");
-    lcd.setCursor(0, 1);
-    lcd.print("WiFi...");
-    delay(1000);
-    lcd.clear();
-  }
+  
   Serial.print("Connected to WiFi network with IP Address: ");
   Serial.println(WiFi.localIP());
 }
